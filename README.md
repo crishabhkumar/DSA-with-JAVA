@@ -1,2 +1,3 @@
-<h2 align = 'center' >DSA with JAVA</h2>
-It contains the Java code of all the DSA topics which i am learning by Kunal Kushwaha.
+### DSA in JAVA
+
+_This **repo** consist of my hand on practice code work in **DSA in JAVA**._
