@@ -41,6 +41,19 @@ public class Main {
 
         Student raghav = new Student(4,"Raghav",98.9f);
 
+        Student other = new Student(raghav);
+        System.out.println(other.name);
+
+
+
+        Student s1 = new Student();
+        Student s2 = s1;
+        System.out.println(s1.name);
+        System.out.println(s2.name);
+        s1.name = "Kajal";
+        System.out.println(s1.name);
+        System.out.println(s2.name);
+
     }
 }
 
@@ -56,11 +69,11 @@ class Student{
 
     //we need one word to access every object
 
-    Student(){      //default constructor
-        this.name = "Rishabh";
-        this.rno = 50;
-        this.marks = 4500.65f;
-    }
+//    Student(){      //default constructor
+//        this.name = "Rishabh";
+//        this.rno = 50;
+//        this.marks = 4500.65f;
+//    }
 
 
     void greeting(){
@@ -74,18 +87,24 @@ class Student{
         name = newName;
     }
 
+
     Student(int roll,String name,float marks){      //parametrized constructor
         this.rno = roll;
         this.name = name;
         this.marks = marks;
     }
 
-    Student (Student other){
+    Student (Student other){            //parameterized contructor
         this.rno = other.rno;
         this.name = other.name;
         this.marks = other.marks;
     }
 
+    Student(){
+        //call of constructor using another constructor
+        //it is something like new Student(13,"Rishabh",45.65f)
+        this(13,"Rishabh",45.65f);
+    }
 
 
 
